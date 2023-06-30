@@ -9,6 +9,9 @@ export class People {
   name: string
 
   @Column()
+  active: boolean
+
+  @Column()
   email: string
 
   @Column()
