@@ -15,7 +15,7 @@ dataSource
 
 Routes(app)
 
-const port = 8000
+const port = 2121
 
 app.listen(port, () => console.log(`Listening to port: ${port}`))
 

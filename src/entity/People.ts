@@ -1,4 +1,6 @@
-import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm'
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm'
+import { SchoolClass } from './SchoolClass'
+import { Enrollment } from './Enrollment'
 
 @Entity()
 export class People {
@@ -16,4 +18,10 @@ export class People {
 
   @Column()
   role: 'student' | 'professor'
+
+  @OneToMany(() => SchoolClass, (schoolclass) => schoolclass.id)
+  school_classes: number[]
+
+  @OneToMany(() => Enrollment, (enrollment) => enrollment.id)
+  enrollments: number[]
 }
