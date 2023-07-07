@@ -7,7 +7,7 @@ export class Level {
   id: number
 
   @Column()
-  level_description: 'basic' | 'medium' | 'advanced'
+  level_description: string
 
   @OneToMany(() => SchoolClass, (schoolClass) => schoolClass.id)
   school_classes: number[]

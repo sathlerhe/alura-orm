@@ -155,8 +155,6 @@ export default class PeopleController {
         .where('id = :id', { id: Number(id) })
         .execute()
 
-      console.log(person)
-
       if (person.affected === 0) {
         return res.status(404).json({
           error: `Could not find person with id: ${id}`,
